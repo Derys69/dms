@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DMS - Register</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container-center">
+        <div class="card">
+
+            <h2 style="color: #059669; text-align: center; font-size: 1.5rem; font-weight: bold; margin-bottom: 1.5rem;">
+                DMS Register
+            </h2>
+
+            <input type="text" id="reg-name" placeholder="Nama Lengkap" class="input-field focus-green">
+            <input type="email" id="reg-email" placeholder="Email" class="input-field focus-green">
+            <input type="password" id="reg-password" placeholder="Password (min 6 karakter)" class="input-field focus-green">
+
+            <button onclick="handleRegister()" class="btn btn-green">Daftar Akun</button>
+
+            <p style="text-align: center; margin-top: 1rem; font-size: 0.875rem;">
+                Sudah punya akun?
+                <a href="login.html" style="color: #2563eb; font-weight: bold;">Login di sini</a>
+            </p>
+
+        </div>
+    </div>
+    <script src="js/config.js"></script>
+    <script src="js/register.js"></script>
+</body>
+
+</html>

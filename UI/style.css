@@ -1,0 +1,106 @@
+/* General Style */
+body {
+    background-color: #f3f4f6;
+    font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+    margin: 0;
+}
+
+.container-center {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* container dashboard */
+.container {
+    max-width: 896px;
+    margin: 0 auto;
+    padding: 2rem;
+    width: 100%;
+}
+.card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    width: 24rem;
+}
+
+/* Forms & Inputs */
+.input-field {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.25rem;
+    outline: none;
+    transition: all 0.2s;
+}
+
+.input-field:focus {
+    box-shadow: 0 0 0 2px transparent;
+}
+
+.focus-blue:focus { border-color: #3b82f6; box-shadow: 0 0 0 2px #bfdbfe; }
+.focus-green:focus { border-color: #10b981; box-shadow: 0 0 0 2px #d1fae5; }
+
+/* Buttons */
+.btn {
+    width: 100%;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    font-weight: bold;
+    transition: background-color 0.2s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-blue { background-color: #2563eb; }
+.btn-blue:hover { background-color: #1d4ed8; }
+
+.btn-green { background-color: #059669; }
+.btn-green:hover { background-color: #047857; }
+
+.btn-red { background-color: #ef4444; width: auto; padding: 0.5rem 1rem; }
+.btn-red:hover { background-color: #dc2626; }
+
+.btn-google {
+    width: 100%;
+    background-color: white;
+    border: 1px solid #d1d5db;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-google:hover { background-color: #f9fafb; }
+
+/* Dashboard Specific */
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    border-left: 4px solid #2563eb;
+    margin-bottom: 2rem;
+}
+
+.section-card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0.25rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.border-top-green { border-top: 4px solid #10b981; }
+.border-top-gray { border-top: 4px solid #4b5563; }

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DMS - Login</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container-center">
+        <div class="card">
+
+            <h2 style="color: #2563eb; text-align: center; font-size: 1.5rem; font-weight: bold; margin-bottom: 1.5rem;">
+                DMS Login
+            </h2>
+
+            <input type="email" id="login-email" placeholder="Email" class="input-field focus-blue">
+            <input type="password" id="login-password" placeholder="Password" class="input-field focus-blue">
+
+            <button onclick="handleLogin()" class="btn btn-blue">Login</button>
+
+            <div style="margin: 1rem 0; display: flex; align-items: center;">
+                <hr style="flex-grow: 1;">
+                <span style="padding: 0 10px; font-size: 0.8rem;">ATAU</span>
+                <hr style="flex-grow: 1;">
+            </div>
+
+            <button onclick="handleGoogleLogin()" class="btn-google">
+                <img src="https://www.gstatic.com/images/branding/product/1x/gsa_512dp.png" style="width: 20px; margin-right: 8px;">
+                Sign in with Google
+            </button>
+
+            <p style="text-align: center; margin-top: 1rem; font-size: 0.875rem;">
+                Belum punya akun?
+                <a href="register.html" style="color: #2563eb; font-weight: bold;">Daftar di sini</a>
+            </p>
+
+        </div>
+    </div>
+
+    <script src="js/config.js"></script>
+    <script src="js/login.js"></script>
+
+</body>
+
+</html>

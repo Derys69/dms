@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DMS - Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container-center">
+        <div class="container">
+            
+            <div class="dashboard-header">
+                <div>
+                    <h1 style="font-size: 1.5rem; font-weight: bold;">DMS Dashboard</h1>
+                    <p style="font-size: 0.875rem; color: #6b7280;">Sistem Manajemen Dokumen</p>
+                </div>
+                <button onclick="handleLogout()" class="btn btn-red">Logout</button>
+            </div>
+
+            <div class="section-card border-top-green">
+                <h3 style="font-weight: bold; margin-bottom: 1rem;">Buat Dokumen Baru</h3>
+                <input type="text" id="doc-title" placeholder="Judul Dokumen" class="input-field focus-green">
+                <textarea id="doc-content" placeholder="Isi Dokumen" rows="3" class="input-field focus-green"></textarea>
+                <button onclick="createDoc()" class="btn btn-green" style="width: auto; padding: 0.5rem 1.5rem;">
+                    Simpan Dokumen
+                </button>
+            </div>
+
+            <div class="section-card border-top-gray">
+                <h3 style="font-weight: bold; margin-bottom: 1rem;">Daftar Dokumen</h3>
+                <div id="doc-list"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="js/config.js"></script>
+    <script src="js/dashboard.js"></script>
+
+</body>
+
+</html>

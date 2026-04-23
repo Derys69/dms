@@ -1,0 +1,134 @@
+{
+	"info": {
+		"_postman_id": "dms-api-testing",
+		"name": "DMS Document Management API",
+		"description": "Collection untuk testing RBAC dan ABAC pada aplikasi DMS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login Standard",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"budi.it@mail.com\",\n    \"password\": \"password123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3005/api/v1/auth/login",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "3005",
+							"path": ["api", "v1", "auth", "login"]
+						}
+					}
+				},
+				{
+					"name": "Google Login (Browser Only)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3005/api/v1/auth/google/login",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "3005",
+							"path": ["api", "v1", "auth", "google", "login"]
+						},
+						"description": "Buka URL ini di browser, bukan di Postman langsung."
+					}
+				}
+			]
+		},
+		{
+			"name": "Documents",
+			"item": [
+				{
+					"name": "Create Document",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwt_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Laporan Rahasia IT\",\n    \"content\": \"Ini adalah dokumen milik tim IT.\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3005/api/v1/documents/",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "3005",
+							"path": ["api", "v1", "documents", ""]
+						}
+					}
+				},
+				{
+					"name": "Get My Document (ABAC)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwt_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3005/api/v1/documents/1",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "3005",
+							"path": ["api", "v1", "documents", "1"]
+						},
+						"description": "Ganti ID sesuai dokumen yang ingin dites kepemilikannya."
+					}
+				},
+				{
+					"name": "Delete Document (RBAC + ABAC)",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwt_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3005/api/v1/documents/1",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "3005",
+							"path": ["api", "v1", "documents", "1"]
+						}
+					}
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "jwt_token",
+			"value": "PASTE_TOKEN_DISINI"
+		}
+	]
+}
